@@ -1,8 +1,8 @@
 #!/bin/bash
 # Menu For Script
 # Edition : Stable Edition V1.0
-# Auther  : AWALUDIN FERIYANTO
-# (C) Copyright 2021-2022 By RIDDEV
+# Auther  : NYARIGRATISAN
+# (C) Copyright 2023 By NYARIGRATISAN
 # =========================================
 #!/bin/bash
 # // Checking Script Expired
@@ -21,7 +21,7 @@ trx=$(grep -c -E "^#! " "/etc/xray/config.json")
 ssx=$(grep -c -E "^## " "/etc/xray/config.json")
 #######PERIZINAN
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/muhammadnoor674/izinvps/ipuk/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -39,7 +39,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/muhammadnoor674/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -56,7 +56,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/muhammadnoor674/izinvps/ipuk/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -74,7 +74,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/muhammadnoor674/izinvps/ipuk/ip | grep $MYIP | awk '{print $3}')
 fi
 
 clear
@@ -189,8 +189,8 @@ echo -e "□ Clients Name        = $Name"
 echo -e "□ Exfire Script VPS   = $Exp"
 echo -e "□ Time Reboot VPS     = 00:00 ${GREEN}( Jam 12 Malam )${NC}"
 echo -e "□ License Limit       = 3 VPS ${GREEN}( Persatu IP VPS )${NC}"
-echo -e "□ AutoScript By Dev   = XDRG ${GREEN}( RIDWAN-DEV112 )${NC}"
-exp=$( curl -s https://raw.githubusercontent.com/myridwan/izinvps/ipuk/ip | grep -w $IP | cut -d ' ' -f 3 )
+echo -e "□ AutoScript By Dev   = NYARIGRATISAN ${GREEN}( AnuyBazoelk639 )${NC}"
+exp=$( curl -s https://raw.githubusercontent.com/muhammadnoor674/izinvps/ipuk/ip | grep -w $IP | cut -d ' ' -f 3 )
 now=`date -d "0 days" +"%Y-%m-%d"`
 expired_date=$(date -d "$exp" +%s)
 now_date=$(date -d "$now" +%s)
@@ -225,7 +225,7 @@ echo -e "  ${COLOR1}[06]${NC} • [${YELLOW}Menu${NC}] SET DNS   ${COLOR1}[13]${
 echo -e "  ${COLOR1}[07]${NC} • [${YELLOW}Menu${NC}] LOAD VPS  ${COLOR1}[14]${NC} • CHANGE PW VPS  $COLOR1 $NC"
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ XDRGVPN PROJECT ⇲                      \E[0m"
+echo -e "\E[44;1;39m                     ⇱ NYARIGRATISAN PROJECT ⇲                      \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e ""
